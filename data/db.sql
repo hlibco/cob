@@ -1,3 +1,16 @@
+# ************************************************************
+# Sequel Pro SQL dump
+# Version 4541
+#
+# http://www.sequelpro.com/
+# https://github.com/sequelpro/sequelpro
+#
+# Host: 127.0.0.1 (MySQL 5.5.5-10.3.8-MariaDB)
+# Database: collegebacker
+# Generation Time: 2018-08-24 01:01:22 +0000
+# ************************************************************
+
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -15,14 +28,14 @@ DROP TABLE IF EXISTS `contributions`;
 CREATE TABLE `contributions` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `uuid` varchar(36) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `updated_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `deleted_at` datetime DEFAULT NULL,
+  `createdAt` datetime NOT NULL DEFAULT current_timestamp(),
+  `updatedAt` datetime NOT NULL DEFAULT current_timestamp(),
+  `deletedAt` datetime DEFAULT NULL,
   `amount` int(10) unsigned NOT NULL,
-  `contributor_id` int(10) unsigned DEFAULT NULL,
+  `contributorId` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK_bf5e4bafa832ab25748a4a3fb2c` (`contributor_id`),
-  CONSTRAINT `FK_bf5e4bafa832ab25748a4a3fb2c` FOREIGN KEY (`contributor_id`) REFERENCES `contributors` (`id`)
+  KEY `FK_20204d4b705d1e56c6e83acb4be` (`contributorId`),
+  CONSTRAINT `FK_20204d4b705d1e56c6e83acb4be` FOREIGN KEY (`contributorId`) REFERENCES `contributors` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
@@ -35,12 +48,12 @@ DROP TABLE IF EXISTS `contributors`;
 CREATE TABLE `contributors` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `uuid` varchar(36) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `updated_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `deleted_at` datetime DEFAULT NULL,
-  `first_name` varchar(60) DEFAULT NULL,
-  `last_name` varchar(90) NOT NULL,
-  `photo_url` varchar(255) DEFAULT NULL,
+  `createdAt` datetime NOT NULL DEFAULT current_timestamp(),
+  `updatedAt` datetime NOT NULL DEFAULT current_timestamp(),
+  `deletedAt` datetime DEFAULT NULL,
+  `firstName` varchar(60) NOT NULL,
+  `lastName` varchar(90) DEFAULT NULL,
+  `photoUrl` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

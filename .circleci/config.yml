@@ -72,7 +72,7 @@ jobs:
           name: Run coverage tests
           environment:
             NODE_ENV: test
-            DEBUG: xco:*
+            DEBUG: cob:*
             DEBUG_COLORS: true
           command: yarn test:cov
       - run:

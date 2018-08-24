@@ -55,7 +55,8 @@ export class ConfigService implements OnModuleInit {
     this.hostname = envstore.pick(
       'HOSTNAME',
       {
-        production: prop => envstore.string(prop, 'api.xcosearch.com'),
+        production: prop =>
+          envstore.string(prop, 'collegebacker.xcosearch.com'),
       },
       prop => envstore.string(prop, `localhost`),
     );
