@@ -44,6 +44,7 @@ export class ContributionService {
       },
       skip: offset,
       take: limit,
+      order: { createdAt: 'DESC' },
     });
   }
 

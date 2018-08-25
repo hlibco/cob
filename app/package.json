@@ -1,0 +1,35 @@
+{
+  "name": "collegebacker-app",
+  "version": "0.1.0",
+  "description": "Front-end of the CollegeBacker Project",
+  "author": "Felipe Hlibco",
+  "license": "MIT",
+  "scripts": {
+    "start": "PORT=3020 nuxt",
+    "build": "PORT=3020 nuxt build",
+    "serve": "PORT=3020 nuxt start",
+    "generate": "PORT=3020 nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "postinstall": "yarn build",
+    "deploy": "rm -Rf dist && NODE_ENV=production BASE_URL=http://collegebacker-app.xcoproject.com API_URL=http://collegebacker.xcoproject.com  yarn generate && cp CNAME dist/CNAME && surge -p dist"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "@types/axios": "0.14.0",
+    "element-ui": "2.4.6",
+    "nuxt": "^1.3.0",
+    "nuxt-property-decorator": "^1.2.0",
+    "stylus": "0.54.5",
+    "stylus-loader": "3.0.2",
+    "vuex-class": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.6",
+    "babel-eslint": "8.2.6",
+    "eslint": "5.4.0",
+    "eslint-friendly-formatter": "4.0.1",
+    "eslint-plugin-vue": "4.7.1",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.7.2"
+  }
+}

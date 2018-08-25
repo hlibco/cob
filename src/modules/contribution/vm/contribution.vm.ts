@@ -42,12 +42,8 @@ export class ContributionVm {
     const contributor = contribution.contributor;
 
     this.uuid = contribution.uuid;
-    this.contributor = new ContributionContributor(contributor);
-    // this.contributor = {
-    //   firstName: contributor.firstName,
-    //   lastName: contributor.lastName,
-    //   photoUrl: contributor.photoUrl,
-    // };
+    this.amount = contribution.amount;
     this.createdAt = contribution.createdAt;
+    this.contributor = new ContributionContributor(contributor);
   }
 }

@@ -1,0 +1,84 @@
+section
+  margin 24px
+h1
+  font-weight bold
+  margin 0 0 32px
+  padding 0
+  text-align center
+  text-transform uppercase
+
+.canvas
+  background #f1f1f1
+  border 1px solid #ddd
+  border-radius 4px
+  margin 0 auto
+  max-width 800px
+  padding 24px
+.contributions
+  display: flex;
+  justify-content: space-between;
+  overflow hidden
+
+.contribution
+  text-align center
+  .contributor_photo
+    height 120px
+    margin-bottom 16px
+    position relative
+    width: 120px
+    img
+      border-radius 200px
+      height 120px
+      width: 120px
+    .remove
+      background #f1f1f1
+      border-radius 10px
+      cursor pointer
+      display block
+      font-size 14px
+      height 20px
+      position absolute
+      right 10px
+      width 20px
+      top 5px
+      &:hover
+        background #fff
+  .contributor_name
+    font-size 16px
+    margin-bottom 16px
+  .amount
+    font-size 24px
+    font-weight bold
+
+
+form
+  border 1px solid #eee
+  border-radius 4px
+  font-size 16px
+  margin 32px auto
+  max-width 300px
+  padding 16px
+  label
+    display block
+    font-weight bold
+    margin-bottom 8px
+  input
+    border 1px solid #ccc
+    font-size 16px
+    margin-bottom 12px
+    outline 0
+    padding 8px
+    width 93%
+    &:active, &:focus
+      border-color #000
+  button
+    background #0ec83a
+    border 0
+    border-radius 2px
+    color #fff
+    cursor pointer
+    font-size 18px
+    margin-top 16px
+    padding 8px 12px
+    &:hover
+      background #000

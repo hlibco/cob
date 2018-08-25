@@ -1,5 +1,6 @@
 # dependencies
 /node_modules
+/app/node_modules
 
 # IDE
 /.idea
@@ -18,3 +19,5 @@ package-lock.json
 
 # dist
 /dist
+/app/dist
+/app/.nuxt
